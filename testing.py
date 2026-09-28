@@ -8,7 +8,7 @@ sense = SenseHat()
 msleep = lambda O: time.sleep(O / 1000.0)
 
 
-def neOt_colour():
+def arrow():
     X = [255, 0, 0]  # Red
     O = [0, 0, 0]  # Black
 
@@ -23,7 +23,4 @@ def neOt_colour():
     O, O, O, X, X, O, O, O
     ]
 
-while True:
-    sense.clear([0, 0, 0])
-    msleep(2)
-    neOt_colour()
+arrow()
