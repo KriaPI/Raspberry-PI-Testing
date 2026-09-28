@@ -4,37 +4,26 @@ from sense_hat import SenseHat
 
 sense = SenseHat()
 
-r = 255
-g = 0
-b = 0
 
-msleep = lambda x: time.sleep(x / 1000.0)
+msleep = lambda O: time.sleep(O / 1000.0)
 
 
-def next_colour():
-    global r
-    global g
-    global b
+def neOt_colour():
+    X = [255, 0, 0]  # Red
+    O = [0, 0, 0]  # Black
 
-    if (r == 255 and g < 255 and b == 0):
-        g += 1
-
-    if (g == 255 and r > 0 and b == 0):
-        r -= 1
-
-    if (g == 255 and b < 255 and r == 0):
-        b += 1
-
-    if (b == 255 and g > 0 and r == 0):
-        g -= 1
-
-    if (b == 255 and r < 255 and g == 0):
-        r += 1
-
-    if (r == 255 and b > 0 and g == 0):
-        b -= 1
+    Arrow = [
+    O, O, O, X, X, O, O, O,
+    O, O, O, O, X, X, O, O,
+    O, O, O, O, O, X, X, O,
+    X, X, X, X, X, X, X, X,
+    X, X, X, X, X, X, X, X,
+    O, O, O, O, O, X, X, O,
+    O, O, O, O, X, X, O, O,
+    O, O, O, X, X, O, O, O
+    ]
 
 while True:
-    sense.clear([r, g, b])
+    sense.clear([0, 0, 0])
     msleep(2)
-    next_colour()
+    neOt_colour()
