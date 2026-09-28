@@ -26,5 +26,5 @@ def arrow():
 
 
 sense.clear()
-sense.setPixels(arrow())
+sense.set_pixels(arrow())
 time.sleep(1)
