@@ -22,5 +22,9 @@ def arrow():
     O, O, O, O, X, X, O, O,
     O, O, O, X, X, O, O, O
     ]
+    return Arrow
 
-arrow()
+
+sense.clear()
+sense.setPixels(arrow())
+time.sleep(1)
